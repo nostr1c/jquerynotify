@@ -15,6 +15,16 @@
 #buttons-parent div:nth-child(2) {
     background-color: red;
 }
+#notify-wrapper {
+	position:fixed; 
+	left:0; 
+	top:0; 
+	right:0; 
+	bottom:0; 
+	opacity: 0.84;
+	pointer-events: none;
+	z-index: 10000000000000;
+}
 .notify-parent {
     display: flex;
     flex-direction: column;
@@ -22,7 +32,6 @@
     right: -16.15vw;
     top: 0;
     margin: 0.8vw;
-    z-index: 10000000;
 }
 .notify-child {
     display: flex;
