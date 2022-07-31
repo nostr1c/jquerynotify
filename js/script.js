@@ -27,7 +27,8 @@ function notify(notifyText) {
     `;
     $(".notify-parent").append(html);
     $(`#notify-id-${notifyId}`).delay(400).css("position", "relative");
-    $(`#notify-id-${notifyId}`).animate({right: $(window).width()*0.1615}, 250);
+    $(`#notify-id-${notifyId}`).animate({right: $(window).width()*0.1715}, 250);
+    $(`#notify-id-${notifyId}`).animate({right: $(window).width()*0.1615}, 100);
     $(`#notify-id-${notifyId}`).delay(3000).animate({right: 0}, 250)
     .queue(function() { $(this).remove(); });
 }   
