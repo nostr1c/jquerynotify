@@ -20,18 +20,13 @@ function notify(notifyText) {
         notifyBackground = "linear-gradient(140deg, rgba(241,58,86,1) 0%, rgba(226,45,73,1) 28%, rgba(210,29,56,1) 64%, rgba(189,12,39,1) 100%);";
     }
     let html = `
-    <div data-notify="${notifyId}" id="notify-id-${notifyId}" class="notify-child" style="background:${notifyBackground}">
+    <div id="notify-id-${notifyId}" class="notify-child" style="background:${notifyBackground}">
         <span class="notify-icon">${notifyChar}</span>
         <span class="notify-text">${notifyText.text}</span>
     </div>
     `;
     $(".notify-parent").append(html);
-    $(`#notify-id-${notifyId}`).css({
-        "opacity":"0",
-        "display":"relative",
-    }).show().animate({opacity:1})
-    $(`#notify-id-${notifyId}`).css("position", "relative");
-	$(`#notify-id-${notifyId}`).css("bottom", "0");
+    $(`#notify-id-${notifyId}`).delay(400).css("position", "relative");
     $(`#notify-id-${notifyId}`).animate({right: $(window).width()*0.1615}, 250);
     $(`#notify-id-${notifyId}`).delay(3000).animate({right: 0}, 250)
     .queue(function() { $(this).remove(); });
