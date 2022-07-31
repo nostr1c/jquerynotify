@@ -26,9 +26,12 @@ function notify(notifyText) {
     </div>
     `;
     $(".notify-parent").append(html);
-    $(`#notify-id-${notifyId}`).delay(400).css("position", "relative");
-    $(`#notify-id-${notifyId}`).animate({right: $(window).width()*0.1715}, 250);
-    $(`#notify-id-${notifyId}`).animate({right: $(window).width()*0.1615}, 100);
-    $(`#notify-id-${notifyId}`).delay(3000).animate({right: 0}, 250)
+    $(`#notify-id-${notifyId}`).delay(400).css("position", "relative")
+    .animate({right: $(window).width()*0.1715}, 250)
+    .animate({right: $(window).width()*0.1615}, 100)
+    .animate({right: $(window).width()*0.159}, 50)
+    .animate({right: $(window).width()*0.1615}, 50)
+    .delay(3000).animate({right: $(window).width()*0.1755}, 150)
+    .animate({right: 0}, 250)
     .queue(function() { $(this).remove(); });
 }   
