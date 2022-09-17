@@ -5,16 +5,18 @@
     top: 500px;
     left: 500px;
 }
-#buttons-parent div {
+#asd {
 	font-size: 18px;
 	background: #49f539;;
 	padding: 5px 18px;
     cursor: pointer;
     user-select: none;
 }
-#buttons-parent div:nth-child(2) {
+#asd:nth-child(2) {
     background-color: red;
 }
+
+/* Notify */
 #notify-wrapper {
 	position:fixed; 
 	left:0; 
@@ -52,4 +54,22 @@
 .notify-text {
     font-size: 0.90vw;
     margin: auto 0;
+}
+
+/* Push */
+.push-parent {
+    position: relative;
+    display: none;
+    pointer-events: none;
+}
+.push {
+    color: white;
+    padding: 7px 20px;
+    border-radius: 5px;
+    position: absolute;
+    width: max-content;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    top: 10px;
 }
